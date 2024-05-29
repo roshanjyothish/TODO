@@ -12,6 +12,14 @@ class Register(forms.ModelForm):
 
         fields=['username','first_name','last_name','email','password']
 
+        widgets={
+            'username':forms.TextInput(attrs={'class':'form-control','placeholder':'enter a username'}),
+            'first_name':forms.TextInput(attrs={'class':'form-control','placeholder':'enter your first name'}),
+            'last_name':forms.TextInput(attrs={'class':'form-control','placeholder':'enter your last name'}),
+            'email':forms.TextInput(attrs={'class':'form-control','placeholder':'enter your email address'}),
+            'password':forms.TextInput(attrs={'class':'form-control','placeholder':'enter a password'})
+        }
+
 
 
 class TaskForm(forms.ModelForm):
